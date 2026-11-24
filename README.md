@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Drug-Information RAG Assistant (with an evaluated retrieval pipeline)
 
 A question-answering assistant over official FDA drug labels. It answers with
@@ -42,3 +43,6 @@ python -m pytest tests       # chunking tests
 ## Results
 
 _To be filled in after Steps 7 and 9 (results table, before/after error-analysis numbers, limitations)._
+=======
+# drug-info-RAG
+>>>>>>> 9cc42029a7beab43db82478e51e8b24465f3a223

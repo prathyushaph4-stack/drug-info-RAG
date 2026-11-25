@@ -18,9 +18,9 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "data" / "raw"
 CHUNK_DIR = ROOT / "data" / "chunks"
 
-FIXED_WORDS = 500
-FIXED_OVERLAP = 50
-SECTION_MAX_WORDS = 600
+FIXED_WORDS = 250
+FIXED_OVERLAP = 40
+SECTION_MAX_WORDS = 250
 
 
 def clean_text(text: str) -> str:

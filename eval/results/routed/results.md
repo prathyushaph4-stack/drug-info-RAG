@@ -1,13 +1,13 @@
 ## Retrieval results (36 non-trap questions)
 
-| Setup | hit@1 | hit@3 | all@3 | hit@5 | MRR | avg ms |
-|---|---|---|---|---|---|---|
-| fixed+dense | 0.81 | 0.94 | 0.83 | 1.00 | 0.87 | 15 |
-| fixed+hybrid | 0.69 | 0.92 | 0.83 | 0.97 | 0.82 | 17 |
-| section+dense | 0.78 | 0.92 | 0.81 | 0.97 | 0.86 | 17 |
-| section+hybrid_rerank | 0.67 | 0.89 | 0.81 | 0.89 | 0.78 | 396 |
-| section+hybrid | 0.72 | 0.89 | 0.78 | 0.92 | 0.79 | 16 |
-| fixed+hybrid_rerank | 0.67 | 0.83 | 0.78 | 0.97 | 0.77 | 385 |
+| Setup | hit@1 | hit@3 | all@3 | hit@5 | all@5 | MRR | avg ms |
+|---|---|---|---|---|---|---|---|
+| fixed+dense | 0.81 | 0.94 | 0.83 | 1.00 | 0.94 | 0.87 | 15 |
+| fixed+hybrid | 0.69 | 0.92 | 0.83 | 0.97 | 0.92 | 0.82 | 16 |
+| section+dense | 0.78 | 0.92 | 0.81 | 0.97 | 0.86 | 0.86 | 16 |
+| section+hybrid_rerank | 0.67 | 0.89 | 0.81 | 0.89 | 0.81 | 0.78 | 408 |
+| section+hybrid | 0.72 | 0.89 | 0.78 | 0.92 | 0.89 | 0.79 | 17 |
+| fixed+hybrid_rerank | 0.67 | 0.83 | 0.78 | 0.97 | 0.92 | 0.77 | 387 |
 
 ## all@3 by question type
 

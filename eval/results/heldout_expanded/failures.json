@@ -1,0 +1,236 @@
+[
+  {
+    "setup": "section+dense",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Warnings",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Warnings",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Warnings"
+    ],
+    "first_relevant_rank": 2
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Drug Interactions",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": 3
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Drug Interactions",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Warnings"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Warnings"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Drug Interactions",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  }
+]

@@ -137,3 +137,27 @@ def test_routed_without_drug_name_behaves_like_normal_search(retriever, setup):
     routed = retriever.retrieve_routed(question, setup, k=3)
     plain = retriever.retrieve(question, setup, k=3)
     assert [r["id"] for r in routed] == [r["id"] for r in plain]
+
+
+def test_class_expansion_adds_partner_class_terms(retriever, monkeypatch):
+    seen = {}
+
+    def spy(question, setup, k=3, drug=None):
+        seen[drug] = question
+        return []
+
+    monkeypatch.setattr(retriever, "retrieve", spy)
+    question = "Can I take warfarin with ibuprofen?"
+
+    retriever.retrieve_routed(question, "fixed+dense", k=3, expand_classes=True)
+    assert "NSAIDs" in seen["warfarin"]            # warfarin's search gets ibuprofen's class
+    assert "anticoagulants" in seen["ibuprofen"]   # ibuprofen's search gets warfarin's class
+    assert seen["warfarin"].startswith(question)
+
+    seen.clear()
+    retriever.retrieve_routed(question, "fixed+dense", k=3)     # expansion off by default
+    assert seen["warfarin"] == question and seen["ibuprofen"] == question
+
+    seen.clear()
+    retriever.retrieve_routed("What are the side effects of ibuprofen?", "fixed+dense", k=3, expand_classes=True)
+    assert seen["ibuprofen"] == "What are the side effects of ibuprofen?"   # one drug: nothing added

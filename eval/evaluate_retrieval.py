@@ -101,6 +101,7 @@ def summarize(scored: dict[str, list[dict]]) -> dict:
             "n": len(rows),
             **{f"hit@{k}": mean(r[f"hit@{k}"] for r in rows) for k in KS},
             "all@3": mean(r["all@3"] for r in rows),
+            "all@5": mean(r["all@5"] for r in rows),
             "mrr": mean(r["mrr"] for r in rows),
             "avg_ms": mean(r["ms"] for r in rows),
             "all@3_by_type": {t: mean(v) for t, v in sorted(by_type.items())},
@@ -112,14 +113,14 @@ def to_markdown(summary: dict, n_questions: int) -> str:
     lines = [
         f"## Retrieval results ({n_questions} non-trap questions)",
         "",
-        "| Setup | hit@1 | hit@3 | all@3 | hit@5 | MRR | avg ms |",
-        "|---|---|---|---|---|---|---|",
+        "| Setup | hit@1 | hit@3 | all@3 | hit@5 | all@5 | MRR | avg ms |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     ranked = sorted(summary.items(), key=lambda kv: (kv[1]["all@3"], kv[1]["mrr"]), reverse=True)
     for setup, m in ranked:
         lines.append(
             f"| {setup} | {m['hit@1']:.2f} | {m['hit@3']:.2f} | {m['all@3']:.2f} | "
-            f"{m['hit@5']:.2f} | {m['mrr']:.2f} | {m['avg_ms']:.0f} |"
+            f"{m['hit@5']:.2f} | {m['all@5']:.2f} | {m['mrr']:.2f} | {m['avg_ms']:.0f} |"
         )
     types = sorted({t for m in summary.values() for t in m["all@3_by_type"]})
     lines += ["", "## all@3 by question type", "", "| Setup | " + " | ".join(types) + " |",
@@ -137,18 +138,27 @@ def main() -> None:
                         help="default: eval/results (baseline) or eval/results/routed (with --routed)")
     parser.add_argument("--routed", action="store_true",
                         help="use drug-aware retrieval (retrieve_routed) instead of plain retrieval")
+    parser.add_argument("--expand", action="store_true",
+                        help="drug-aware retrieval plus drug-class query expansion (implies --routed)")
     args = parser.parse_args()
 
     from retrieval import SETUPS, Retriever  # imported here so tests don't load models
 
     questions = json.loads(Path(args.gold).read_text())
     retriever = Retriever()
-    search = retriever.retrieve_routed if args.routed else retriever.retrieve
+    def search(text: str, setup: str, k: int) -> list[dict]:
+        if args.expand:
+            return retriever.retrieve_routed(text, setup, k, expand_classes=True)
+        if args.routed:
+            return retriever.retrieve_routed(text, setup, k)
+        return retriever.retrieve(text, setup, k)
+
     scored, failures = evaluate(lambda text, setup, k: search(text, setup, k), questions, list(SETUPS))
     summary = summarize(scored)
     n_questions = len(next(iter(scored.values())))
 
-    default_dir = ROOT / "eval" / "results" / ("routed" if args.routed else "")
+    run_name = "routed_expanded" if args.expand else ("routed" if args.routed else "")
+    default_dir = ROOT / "eval" / "results" / run_name
     out_dir = Path(args.out_dir) if args.out_dir else default_dir
     out_dir.mkdir(parents=True, exist_ok=True)
     markdown = to_markdown(summary, n_questions)

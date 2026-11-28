@@ -17,6 +17,7 @@ from pathlib import Path
 
 import chromadb
 
+from drug_classes import DRUG_CLASSES
 from drugs import DRUGS
 from index import CHROMA_PATH, CHUNK_DIR, STYLES, collection_name, default_embedding_function, load_chunks
 
@@ -160,7 +161,7 @@ class Retriever:
             results = self.rerank(question, self.hybrid_search(style, question, drug=drug))
         return results[:k]
 
-    def retrieve_routed(self, question: str, setup: str, k: int = 3) -> list[dict]:
+    def retrieve_routed(self, question: str, setup: str, k: int = 3, expand_classes: bool = False) -> list[dict]:
         """Drug-aware retrieval.
 
         Finds the drugs the question names, searches each drug's chunks separately,
@@ -171,7 +172,15 @@ class Retriever:
         drugs = detect_drugs(question)
         if not drugs:
             return self.retrieve(question, setup, k)
-        per_drug = [self.retrieve(question, setup, k, drug=d) for d in drugs]
+        per_drug = []
+        for drug in drugs:
+            query = question
+            if expand_classes and len(drugs) > 1:
+                # labels often name the partner's CLASS (NSAIDs, benzodiazepines...), not the drug
+                partners = [p for p in drugs if p != drug]
+                extra = " ".join(term for p in partners for term in DRUG_CLASSES.get(p, []))
+                query = f"{question} {extra}".strip()
+            per_drug.append(self.retrieve(query, setup, k, drug=drug))
         merged, seen = [], set()
         for rank in range(k):
             for results in per_drug:

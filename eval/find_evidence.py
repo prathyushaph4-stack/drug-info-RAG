@@ -38,6 +38,20 @@ def find(drug: str, phrase: str, raw_dir: Path, width: int, limit: int) -> None:
         print("Sections available:", ", ".join(record["sections"]))
 
 
+def count_sections(drug: str, phrase: str, raw_dir: Path) -> None:
+    """One line: in which sections of the label does the phrase appear, and how often."""
+    path = raw_dir / f"{drug.replace(' ', '_')}.json"
+    if not path.exists():
+        sys.exit(f"No label file for '{drug}' in {raw_dir}")
+    record = json.loads(path.read_text())
+    counts = {
+        section: len(re.findall(re.escape(phrase), clean_text(text), flags=re.IGNORECASE))
+        for section, text in record["sections"].items()
+    }
+    hits = ", ".join(f"{section}={n}" for section, n in counts.items() if n)
+    print(f"{drug} / '{phrase}': {hits or 'not found'}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("drug")
@@ -45,8 +59,12 @@ def main() -> None:
     parser.add_argument("--width", type=int, default=100, help="characters of context on each side")
     parser.add_argument("--limit", type=int, default=5, help="maximum matches to show")
     parser.add_argument("--raw-dir", default=str(ROOT / "data" / "raw"))
+    parser.add_argument("--count", action="store_true", help="only list which sections contain the phrase")
     args = parser.parse_args()
-    find(args.drug, args.phrase, Path(args.raw_dir), args.width, args.limit)
+    if args.count:
+        count_sections(args.drug, args.phrase, Path(args.raw_dir))
+    else:
+        find(args.drug, args.phrase, Path(args.raw_dir), args.width, args.limit)
 
 
 if __name__ == "__main__":

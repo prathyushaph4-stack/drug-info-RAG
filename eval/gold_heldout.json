@@ -1,0 +1,101 @@
+[
+  {
+    "id": "h001",
+    "type": "interaction",
+    "question": "Does azithromycin interact with warfarin?",
+    "relevant": [
+      {"drug": "azithromycin", "evidence": ["warfarin"]},
+      {"drug": "warfarin", "evidence": ["antibiotic"]}
+    ],
+    "answer_points": ["may increase the anticoagulant effect / INR; monitor"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "relevant": [
+      {"drug": "naproxen", "evidence": ["ace-inhibitors"]},
+      {"drug": "lisinopril", "evidence": ["anti-inflammatory"]}
+    ],
+    "answer_points": ["NSAIDs may reduce the blood-pressure lowering effect", "kidney function risk"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h003",
+    "type": "interaction",
+    "question": "Does ibuprofen reduce the effect of spironolactone?",
+    "relevant": [
+      {"drug": "spironolactone", "evidence": ["nsaids"]},
+      {"drug": "ibuprofen", "evidence": ["diuretics"]}
+    ],
+    "answer_points": ["NSAIDs can reduce the diuretic effect"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h004",
+    "type": "interaction",
+    "question": "Can furosemide and lisinopril be used together?",
+    "relevant": [
+      {"drug": "furosemide", "evidence": ["angiotensin"]},
+      {"drug": "lisinopril", "evidence": ["diuretic"]}
+    ],
+    "answer_points": ["risk of excessive blood-pressure drop, especially at the start"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h005",
+    "type": "interaction",
+    "question": "Does fluoxetine change the bleeding risk with warfarin?",
+    "relevant": [
+      {"drug": "fluoxetine", "evidence": ["warfarin"]},
+      {"drug": "warfarin", "evidence": ["serotonin reuptake inhibitors"]}
+    ],
+    "answer_points": ["increased bleeding risk"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h006",
+    "type": "interaction",
+    "question": "Is there an interaction between doxycycline and warfarin?",
+    "relevant": [
+      {"drug": "doxycycline", "evidence": ["anticoagulant"]},
+      {"drug": "warfarin", "evidence": ["antibiotic"]}
+    ],
+    "answer_points": ["may enhance the anticoagulant effect"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "relevant": [
+      {"drug": "tramadol", "evidence": ["serotonin syndrome"]},
+      {"drug": "fluoxetine", "evidence": ["tramadol"]}
+    ],
+    "answer_points": ["risk of serotonin syndrome"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h008",
+    "type": "interaction",
+    "question": "Can diclofenac be taken with warfarin?",
+    "relevant": [
+      {"drug": "diclofenac", "evidence": ["warfarin"]},
+      {"drug": "warfarin", "evidence": ["nonsteroidal anti-inflammatory agents"]}
+    ],
+    "answer_points": ["increased risk of bleeding"],
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "h009",
+    "type": "interaction",
+    "question": "Is it safe to take clopidogrel together with warfarin?",
+    "relevant": [
+      {"drug": "clopidogrel", "evidence": ["warfarin"]},
+      {"drug": "warfarin", "evidence": ["clopidogrel"]}
+    ],
+    "answer_points": ["increased bleeding risk"],
+    "expected_behavior": "answer"
+  }
+]

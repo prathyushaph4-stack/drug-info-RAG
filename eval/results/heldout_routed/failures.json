@@ -1,0 +1,418 @@
+[
+  {
+    "setup": "section+dense",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+dense",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Warnings",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+dense",
+    "id": "h009",
+    "type": "interaction",
+    "question": "Is it safe to take clopidogrel together with warfarin?",
+    "needed": [
+      {
+        "drug": "clopidogrel",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "clopidogrel"
+        ]
+      }
+    ],
+    "top3": [
+      "clopidogrel / Warnings",
+      "warfarin / Drug Interactions",
+      "clopidogrel / Drug Interactions"
+    ],
+    "first_relevant_rank": 3
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Warnings",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "h009",
+    "type": "interaction",
+    "question": "Is it safe to take clopidogrel together with warfarin?",
+    "needed": [
+      {
+        "drug": "clopidogrel",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "clopidogrel"
+        ]
+      }
+    ],
+    "top3": [
+      "clopidogrel / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "clopidogrel / Warnings"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "h001",
+    "type": "interaction",
+    "question": "Does azithromycin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "azithromycin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "antibiotic"
+        ]
+      }
+    ],
+    "top3": [
+      "azithromycin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "azithromycin / Adverse Reactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Contraindications",
+      "lisinopril / Drug Interactions",
+      "naproxen / Warnings"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "h006",
+    "type": "interaction",
+    "question": "Is there an interaction between doxycycline and warfarin?",
+    "needed": [
+      {
+        "drug": "doxycycline",
+        "evidence": [
+          "anticoagulant"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "antibiotic"
+        ]
+      }
+    ],
+    "top3": [
+      "doxycycline / Adverse Reactions",
+      "warfarin / Drug Interactions",
+      "doxycycline / Warnings"
+    ],
+    "first_relevant_rank": 2
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": 5
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "h004",
+    "type": "interaction",
+    "question": "Can furosemide and lisinopril be used together?",
+    "needed": [
+      {
+        "drug": "furosemide",
+        "evidence": [
+          "angiotensin"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "diuretic"
+        ]
+      }
+    ],
+    "top3": [
+      "furosemide / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "furosemide / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Drug Interactions",
+      "fluoxetine / Contraindications",
+      "tramadol / Adverse Reactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "h009",
+    "type": "interaction",
+    "question": "Is it safe to take clopidogrel together with warfarin?",
+    "needed": [
+      {
+        "drug": "clopidogrel",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "clopidogrel"
+        ]
+      }
+    ],
+    "top3": [
+      "clopidogrel / Drug Interactions",
+      "warfarin / Warnings",
+      "clopidogrel / Warnings"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "h001",
+    "type": "interaction",
+    "question": "Does azithromycin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "azithromycin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "antibiotic"
+        ]
+      }
+    ],
+    "top3": [
+      "azithromycin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "azithromycin / Adverse Reactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "h002",
+    "type": "interaction",
+    "question": "Can I take naproxen while on lisinopril?",
+    "needed": [
+      {
+        "drug": "naproxen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      },
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      }
+    ],
+    "top3": [
+      "naproxen / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "naproxen / Drug Interactions"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "h007",
+    "type": "interaction",
+    "question": "Is it risky to combine tramadol with fluoxetine?",
+    "needed": [
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "serotonin syndrome"
+        ]
+      },
+      {
+        "drug": "fluoxetine",
+        "evidence": [
+          "tramadol"
+        ]
+      }
+    ],
+    "top3": [
+      "tramadol / Adverse Reactions",
+      "fluoxetine / Drug Interactions",
+      "tramadol / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  }
+]

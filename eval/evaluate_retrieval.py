@@ -133,20 +133,23 @@ def to_markdown(summary: dict, n_questions: int) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--gold", default=str(ROOT / "eval" / "gold_set.json"))
-    parser.add_argument("--out-dir", default=str(ROOT / "eval" / "results"))
+    parser.add_argument("--out-dir", default=None,
+                        help="default: eval/results (baseline) or eval/results/routed (with --routed)")
+    parser.add_argument("--routed", action="store_true",
+                        help="use drug-aware retrieval (retrieve_routed) instead of plain retrieval")
     args = parser.parse_args()
 
     from retrieval import SETUPS, Retriever  # imported here so tests don't load models
 
     questions = json.loads(Path(args.gold).read_text())
     retriever = Retriever()
-    scored, failures = evaluate(
-        lambda text, setup, k: retriever.retrieve(text, setup, k), questions, list(SETUPS)
-    )
+    search = retriever.retrieve_routed if args.routed else retriever.retrieve
+    scored, failures = evaluate(lambda text, setup, k: search(text, setup, k), questions, list(SETUPS))
     summary = summarize(scored)
     n_questions = len(next(iter(scored.values())))
 
-    out_dir = Path(args.out_dir)
+    default_dir = ROOT / "eval" / "results" / ("routed" if args.routed else "")
+    out_dir = Path(args.out_dir) if args.out_dir else default_dir
     out_dir.mkdir(parents=True, exist_ok=True)
     markdown = to_markdown(summary, n_questions)
     (out_dir / "results.md").write_text(markdown)

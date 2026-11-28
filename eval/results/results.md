@@ -3,11 +3,11 @@
 | Setup | hit@1 | hit@3 | all@3 | hit@5 | MRR | avg ms |
 |---|---|---|---|---|---|---|
 | fixed+hybrid | 0.69 | 0.92 | 0.81 | 0.94 | 0.82 | 12 |
-| section+hybrid_rerank | 0.67 | 0.89 | 0.78 | 0.92 | 0.78 | 364 |
+| section+hybrid_rerank | 0.67 | 0.89 | 0.78 | 0.92 | 0.78 | 312 |
 | fixed+dense | 0.78 | 0.89 | 0.75 | 0.97 | 0.85 | 11 |
-| section+dense | 0.75 | 0.92 | 0.75 | 0.94 | 0.84 | 13 |
-| section+hybrid | 0.67 | 0.86 | 0.72 | 0.94 | 0.76 | 13 |
-| fixed+hybrid_rerank | 0.61 | 0.86 | 0.72 | 0.94 | 0.75 | 348 |
+| section+dense | 0.75 | 0.92 | 0.75 | 0.94 | 0.84 | 11 |
+| section+hybrid | 0.67 | 0.86 | 0.72 | 0.94 | 0.76 | 12 |
+| fixed+hybrid_rerank | 0.61 | 0.86 | 0.72 | 0.94 | 0.75 | 321 |
 
 ## all@3 by question type
 

@@ -17,7 +17,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from index import build_collection, collection_name  # noqa: E402
-from retrieval import SETUPS, Retriever, rrf_fuse  # noqa: E402
+from retrieval import SETUPS, Retriever, detect_drugs, rrf_fuse  # noqa: E402
 
 DIM = 256
 
@@ -110,3 +110,30 @@ def test_every_setup_finds_the_right_chunk(retriever, setup):
 def test_unknown_setup_raises(retriever):
     with pytest.raises(ValueError):
         retriever.retrieve("anything", "nope+dense")
+
+
+def test_detect_drugs_order_and_word_boundaries():
+    assert detect_drugs("Is it safe to take warfarin together with ibuprofen?") == ["warfarin", "ibuprofen"]
+    assert detect_drugs("What are the side effects of insulin glargine?") == ["insulin glargine"]
+    assert detect_drugs("What is the capital of France?") == []
+    assert detect_drugs("Can I stop taking sertralines?") == []   # whole words only
+
+
+@pytest.mark.parametrize("setup", SETUPS)
+def test_drug_filter_limits_results_to_that_drug(retriever, setup):
+    results = retriever.retrieve("bleeding nausea depression kidney", setup, k=4, drug="ibuprofen")
+    assert results and {r["drug"] for r in results} == {"ibuprofen"}
+
+
+@pytest.mark.parametrize("setup", SETUPS)
+def test_routed_two_drug_question_covers_both_drugs(retriever, setup):
+    results = retriever.retrieve_routed("warfarin ibuprofen bleeding interaction", setup, k=2)
+    assert {r["drug"] for r in results} == {"warfarin", "ibuprofen"}
+
+
+@pytest.mark.parametrize("setup", SETUPS)
+def test_routed_without_drug_name_behaves_like_normal_search(retriever, setup):
+    question = "renal impairment and metabolic acidosis"
+    routed = retriever.retrieve_routed(question, setup, k=3)
+    plain = retriever.retrieve(question, setup, k=3)
+    assert [r["id"] for r in routed] == [r["id"] for r in plain]

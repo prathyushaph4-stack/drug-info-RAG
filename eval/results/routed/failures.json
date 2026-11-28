@@ -1,0 +1,992 @@
+[
+  {
+    "setup": "section+dense",
+    "id": "q017",
+    "type": "side_effect",
+    "question": "What are the common side effects of ibuprofen?",
+    "needed": [
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "ibuprofen / Adverse Reactions",
+      "ibuprofen / Warnings",
+      "ibuprofen / Warnings"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "section+dense",
+    "id": "q021",
+    "type": "warning",
+    "question": "What is the main bleeding warning for warfarin?",
+    "needed": [
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "fatal bleeding"
+        ]
+      }
+    ],
+    "top3": [
+      "warfarin / Drug Interactions",
+      "warfarin / Warnings",
+      "warfarin / Adverse Reactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "section+dense",
+    "id": "q028",
+    "type": "interaction",
+    "question": "Can lisinopril be combined with spironolactone?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "potassium"
+        ]
+      },
+      {
+        "drug": "spironolactone",
+        "evidence": [
+          "potassium"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "spironolactone / Contraindications",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+dense",
+    "id": "q032",
+    "type": "interaction",
+    "question": "Can I take lisinopril and ibuprofen together?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "ibuprofen / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+dense",
+    "id": "q033",
+    "type": "interaction",
+    "question": "Does ciprofloxacin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "ciprofloxacin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "ciprofloxacin"
+        ]
+      }
+    ],
+    "top3": [
+      "ciprofloxacin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "ciprofloxacin / Warnings"
+    ],
+    "first_relevant_rank": 5
+  },
+  {
+    "setup": "section+dense",
+    "id": "q034",
+    "type": "interaction",
+    "question": "What happens if alprazolam is taken with tramadol?",
+    "needed": [
+      {
+        "drug": "alprazolam",
+        "evidence": [
+          "opioid"
+        ]
+      },
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "benzodiazepines"
+        ]
+      }
+    ],
+    "top3": [
+      "alprazolam / Warnings",
+      "tramadol / Warnings",
+      "alprazolam / Warnings"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+dense",
+    "id": "q035",
+    "type": "interaction",
+    "question": "Is there an interaction between sertraline and warfarin?",
+    "needed": [
+      {
+        "drug": "sertraline",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "serotonin reuptake inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "sertraline / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "sertraline / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q009",
+    "type": "dosage",
+    "question": "How should levothyroxine be taken in relation to food?",
+    "needed": [
+      {
+        "drug": "levothyroxine",
+        "evidence": [
+          "empty stomach"
+        ]
+      }
+    ],
+    "top3": [
+      "levothyroxine / Dosage and Administration",
+      "levothyroxine / Dosage and Administration",
+      "levothyroxine / Drug Interactions"
+    ],
+    "first_relevant_rank": 7
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q016",
+    "type": "side_effect",
+    "question": "What are the common side effects of sertraline?",
+    "needed": [
+      {
+        "drug": "sertraline",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "sertraline / Adverse Reactions",
+      "sertraline / Adverse Reactions",
+      "sertraline / Adverse Reactions"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q017",
+    "type": "side_effect",
+    "question": "What are the common side effects of ibuprofen?",
+    "needed": [
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "ibuprofen / Adverse Reactions",
+      "ibuprofen / Warnings",
+      "ibuprofen / Drug Interactions"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q021",
+    "type": "warning",
+    "question": "What is the main bleeding warning for warfarin?",
+    "needed": [
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "fatal bleeding"
+        ]
+      }
+    ],
+    "top3": [
+      "warfarin / Warnings",
+      "warfarin / Drug Interactions",
+      "warfarin / Drug Interactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q028",
+    "type": "interaction",
+    "question": "Can lisinopril be combined with spironolactone?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "potassium"
+        ]
+      },
+      {
+        "drug": "spironolactone",
+        "evidence": [
+          "potassium"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "spironolactone / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q032",
+    "type": "interaction",
+    "question": "Can I take lisinopril and ibuprofen together?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "ibuprofen / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q033",
+    "type": "interaction",
+    "question": "Does ciprofloxacin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "ciprofloxacin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "ciprofloxacin"
+        ]
+      }
+    ],
+    "top3": [
+      "ciprofloxacin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "ciprofloxacin / Contraindications"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid",
+    "id": "q034",
+    "type": "interaction",
+    "question": "What happens if alprazolam is taken with tramadol?",
+    "needed": [
+      {
+        "drug": "alprazolam",
+        "evidence": [
+          "opioid"
+        ]
+      },
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "benzodiazepines"
+        ]
+      }
+    ],
+    "top3": [
+      "alprazolam / Warnings",
+      "tramadol / Warnings",
+      "alprazolam / Warnings"
+    ],
+    "first_relevant_rank": 3
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q015",
+    "type": "side_effect",
+    "question": "What side effects can lisinopril cause?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "cough"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Indications and Usage",
+      "lisinopril / Adverse Reactions",
+      "lisinopril / Adverse Reactions"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q016",
+    "type": "side_effect",
+    "question": "What are the common side effects of sertraline?",
+    "needed": [
+      {
+        "drug": "sertraline",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "sertraline / Drug Interactions",
+      "sertraline / Drug Interactions",
+      "sertraline / Adverse Reactions"
+    ],
+    "first_relevant_rank": 7
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q017",
+    "type": "side_effect",
+    "question": "What are the common side effects of ibuprofen?",
+    "needed": [
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "ibuprofen / Adverse Reactions",
+      "ibuprofen / Warnings",
+      "ibuprofen / Warnings"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q028",
+    "type": "interaction",
+    "question": "Can lisinopril be combined with spironolactone?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "potassium"
+        ]
+      },
+      {
+        "drug": "spironolactone",
+        "evidence": [
+          "potassium"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "spironolactone / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q032",
+    "type": "interaction",
+    "question": "Can I take lisinopril and ibuprofen together?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "ibuprofen / Drug Interactions",
+      "lisinopril / Dosage and Administration"
+    ],
+    "first_relevant_rank": 6
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q033",
+    "type": "interaction",
+    "question": "Does ciprofloxacin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "ciprofloxacin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "ciprofloxacin"
+        ]
+      }
+    ],
+    "top3": [
+      "ciprofloxacin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "ciprofloxacin / Indications and Usage"
+    ],
+    "first_relevant_rank": 2
+  },
+  {
+    "setup": "section+hybrid_rerank",
+    "id": "q034",
+    "type": "interaction",
+    "question": "What happens if alprazolam is taken with tramadol?",
+    "needed": [
+      {
+        "drug": "alprazolam",
+        "evidence": [
+          "opioid"
+        ]
+      },
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "benzodiazepines"
+        ]
+      }
+    ],
+    "top3": [
+      "alprazolam / Drug Interactions",
+      "tramadol / Warnings",
+      "alprazolam / Warnings"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "q021",
+    "type": "warning",
+    "question": "What is the main bleeding warning for warfarin?",
+    "needed": [
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "fatal bleeding"
+        ]
+      }
+    ],
+    "top3": [
+      "warfarin / Drug Interactions",
+      "warfarin / Warnings",
+      "warfarin / Warnings"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "q028",
+    "type": "interaction",
+    "question": "Can lisinopril be combined with spironolactone?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "potassium"
+        ]
+      },
+      {
+        "drug": "spironolactone",
+        "evidence": [
+          "potassium"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "spironolactone / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "q032",
+    "type": "interaction",
+    "question": "Can I take lisinopril and ibuprofen together?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "ibuprofen / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 5
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "q033",
+    "type": "interaction",
+    "question": "Does ciprofloxacin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "ciprofloxacin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "ciprofloxacin"
+        ]
+      }
+    ],
+    "top3": [
+      "ciprofloxacin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "ciprofloxacin / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "q034",
+    "type": "interaction",
+    "question": "What happens if alprazolam is taken with tramadol?",
+    "needed": [
+      {
+        "drug": "alprazolam",
+        "evidence": [
+          "opioid"
+        ]
+      },
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "benzodiazepines"
+        ]
+      }
+    ],
+    "top3": [
+      "alprazolam / Warnings",
+      "tramadol / Contraindications",
+      "alprazolam / Warnings"
+    ],
+    "first_relevant_rank": 3
+  },
+  {
+    "setup": "fixed+dense",
+    "id": "q035",
+    "type": "interaction",
+    "question": "Is there an interaction between sertraline and warfarin?",
+    "needed": [
+      {
+        "drug": "sertraline",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "serotonin reuptake inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "sertraline / Adverse Reactions",
+      "warfarin / Drug Interactions",
+      "sertraline / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "q015",
+    "type": "side_effect",
+    "question": "What side effects can lisinopril cause?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "cough"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "lisinopril / Drug Interactions",
+      "lisinopril / Adverse Reactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "q016",
+    "type": "side_effect",
+    "question": "What are the common side effects of sertraline?",
+    "needed": [
+      {
+        "drug": "sertraline",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "sertraline / Adverse Reactions",
+      "sertraline / Drug Interactions",
+      "sertraline / Drug Interactions"
+    ],
+    "first_relevant_rank": 10
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "q028",
+    "type": "interaction",
+    "question": "Can lisinopril be combined with spironolactone?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "potassium"
+        ]
+      },
+      {
+        "drug": "spironolactone",
+        "evidence": [
+          "potassium"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "spironolactone / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "q032",
+    "type": "interaction",
+    "question": "Can I take lisinopril and ibuprofen together?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Dosage and Administration",
+      "ibuprofen / Drug Interactions",
+      "lisinopril / Drug Interactions"
+    ],
+    "first_relevant_rank": 5
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "q033",
+    "type": "interaction",
+    "question": "Does ciprofloxacin interact with warfarin?",
+    "needed": [
+      {
+        "drug": "ciprofloxacin",
+        "evidence": [
+          "warfarin"
+        ]
+      },
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "ciprofloxacin"
+        ]
+      }
+    ],
+    "top3": [
+      "ciprofloxacin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "ciprofloxacin / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid",
+    "id": "q034",
+    "type": "interaction",
+    "question": "What happens if alprazolam is taken with tramadol?",
+    "needed": [
+      {
+        "drug": "alprazolam",
+        "evidence": [
+          "opioid"
+        ]
+      },
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "benzodiazepines"
+        ]
+      }
+    ],
+    "top3": [
+      "alprazolam / Warnings",
+      "tramadol / Contraindications",
+      "alprazolam / Warnings"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q006",
+    "type": "indication",
+    "question": "Why is atorvastatin prescribed?",
+    "needed": [
+      {
+        "drug": "atorvastatin",
+        "evidence": [
+          "ldl-c"
+        ]
+      }
+    ],
+    "top3": [
+      "atorvastatin / Contraindications",
+      "atorvastatin / Warnings",
+      "atorvastatin / Drug Interactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q014",
+    "type": "side_effect",
+    "question": "What are the common side effects of atorvastatin?",
+    "needed": [
+      {
+        "drug": "atorvastatin",
+        "evidence": [
+          "arthralgia"
+        ]
+      }
+    ],
+    "top3": [
+      "atorvastatin / Warnings",
+      "atorvastatin / Contraindications",
+      "atorvastatin / Drug Interactions"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q015",
+    "type": "side_effect",
+    "question": "What side effects can lisinopril cause?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "cough"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Indications and Usage",
+      "lisinopril / Drug Interactions",
+      "lisinopril / Indications and Usage"
+    ],
+    "first_relevant_rank": 4
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q016",
+    "type": "side_effect",
+    "question": "What are the common side effects of sertraline?",
+    "needed": [
+      {
+        "drug": "sertraline",
+        "evidence": [
+          "nausea"
+        ]
+      }
+    ],
+    "top3": [
+      "sertraline / Adverse Reactions",
+      "sertraline / Drug Interactions",
+      "sertraline / Adverse Reactions"
+    ],
+    "first_relevant_rank": null
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q021",
+    "type": "warning",
+    "question": "What is the main bleeding warning for warfarin?",
+    "needed": [
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "fatal bleeding"
+        ]
+      }
+    ],
+    "top3": [
+      "warfarin / Drug Interactions",
+      "warfarin / Drug Interactions",
+      "warfarin / Warnings"
+    ],
+    "first_relevant_rank": 5
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q027",
+    "type": "interaction",
+    "question": "Is it safe to take warfarin together with ibuprofen?",
+    "needed": [
+      {
+        "drug": "warfarin",
+        "evidence": [
+          "nonsteroidal anti-inflammatory agents"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "warfarin"
+        ]
+      }
+    ],
+    "top3": [
+      "warfarin / Drug Interactions",
+      "ibuprofen / Drug Interactions",
+      "warfarin / Drug Interactions"
+    ],
+    "first_relevant_rank": 1
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q032",
+    "type": "interaction",
+    "question": "Can I take lisinopril and ibuprofen together?",
+    "needed": [
+      {
+        "drug": "lisinopril",
+        "evidence": [
+          "anti-inflammatory"
+        ]
+      },
+      {
+        "drug": "ibuprofen",
+        "evidence": [
+          "ace-inhibitors"
+        ]
+      }
+    ],
+    "top3": [
+      "lisinopril / Drug Interactions",
+      "ibuprofen / Drug Interactions",
+      "lisinopril / Indications and Usage"
+    ],
+    "first_relevant_rank": 5
+  },
+  {
+    "setup": "fixed+hybrid_rerank",
+    "id": "q034",
+    "type": "interaction",
+    "question": "What happens if alprazolam is taken with tramadol?",
+    "needed": [
+      {
+        "drug": "alprazolam",
+        "evidence": [
+          "opioid"
+        ]
+      },
+      {
+        "drug": "tramadol",
+        "evidence": [
+          "benzodiazepines"
+        ]
+      }
+    ],
+    "top3": [
+      "alprazolam / Drug Interactions",
+      "tramadol / Warnings",
+      "alprazolam / Drug Interactions"
+    ],
+    "first_relevant_rank": 3
+  }
+]

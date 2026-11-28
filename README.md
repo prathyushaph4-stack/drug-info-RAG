@@ -16,7 +16,8 @@ the main point of this project, **measures which retrieval setup works best**.
 - [x] Step 5: three retrieval setups (`src/retrieval.py`: dense, hybrid, hybrid + reranker)
 - [x] Step 6: gold test set, 44 questions (`eval/gold_set.json`, checked by `eval/validate_gold.py`); pharmacist review pending
 - [x] Step 7: retrieval evaluation script (`eval/evaluate_retrieval.py`: hit@k, all@3, MRR, speed)
-- [ ] Step 8: answer generation, query routing, guardrails
+- [x] Step 8a: drug-aware retrieval routing (`retrieve_routed` in `src/retrieval.py`), motivated by error analysis
+- [ ] Step 8b: answer generation, refusal routing, guardrails
 - [ ] Step 9: error analysis (before/after)
 - [ ] Step 10: FastAPI + Docker + final write-up
 
